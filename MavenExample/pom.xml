@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
 
 
-    <groupId>edu.lmu.cmsi.mike</groupId>
-  <artifactId>mavenexample</artifactId>
+  <groupId>edu.lmu.cmsi.mike</groupId> <!-- change this to match your package name -->
+  <artifactId>mavenexample</artifactId> <!-- change this to match the name of the project you're working on homework3
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -13,8 +13,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
-  <name>Maven Example</name>
-  <url>http://maven.apache.org</url>
 
   <dependencies>
     <dependency>
@@ -38,9 +36,9 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>edu.lmu.cmsi.mike.mavenexample.App</mainClass>
+          <mainClass>edu.lmu.cmsi.mike.mavenexample.App</mainClass> <!-- change this to the location of your class with the main method -->
           <arguments>
-            <argument>-X</argument>
+            <argument>-X</argument> <!-- you can probably delete this if you don't need to pass arguments to your program -->
             <argument>megally</argument>
           </arguments>
         </configuration>
