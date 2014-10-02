@@ -21,5 +21,5 @@ public abstract class Progression {
     return valueToReturn;
   }
 
-  public abstract void advance();
+  protected abstract void advance();
 }
