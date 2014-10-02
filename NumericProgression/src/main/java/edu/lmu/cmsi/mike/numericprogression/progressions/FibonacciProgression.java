@@ -12,8 +12,8 @@ public class FibonacciProgression extends Progression {
   protected int previous;
 
   public FibonacciProgression() {
-    super(0);
-    this.previous = 1; // hack to make it work :-)
+    super(1);
+    this.previous = 0; // hack to make it work :-)
   }
 
   @Override
