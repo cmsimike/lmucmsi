@@ -17,6 +17,7 @@ public class ArithmeticProgression extends Progression {
     this.increment = increment;
   }
 
+  @Override
   public void advance() {
     this.nextValue += this.increment;
   }

@@ -13,18 +13,18 @@ public class App {
    * It is simply meant as an introductory example of polymorphism.
    */
   public static void main(String[] args) {
-    showInitialSequence(new ArithmeticProgression(10, 4));
-    showInitialSequence(new ArithmeticProgression(-25, 5));
-    showInitialSequence(new GeometricProgression(1, 2));
-    showInitialSequence(new FibonacciProgression());
+    showInitialSequence(new ArithmeticProgression(10, 4), 20);
+    showInitialSequence(new ArithmeticProgression(-25, 5), 25);
+    showInitialSequence(new GeometricProgression(1, 2), 10);
+    showInitialSequence(new FibonacciProgression(), 15);
   }
 
   /**
-   * Displays the first 20 values from the given progression.
+   * Displays the first n values from the given progression.
    */
-  public static void showInitialSequence(Progression p) {
+  public static void showInitialSequence(Progression p, int n) {
     System.out.print("( ");
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < n; i++) {
       System.out.print(p.next() + " ");
     }
     System.out.println(")");

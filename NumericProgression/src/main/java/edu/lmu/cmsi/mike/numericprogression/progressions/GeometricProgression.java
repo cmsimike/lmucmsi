@@ -15,6 +15,7 @@ public class GeometricProgression extends Progression {
     this.base = base;
   }
 
+  @Override
   public void advance() {
     this.nextValue *= this.base;
   }
