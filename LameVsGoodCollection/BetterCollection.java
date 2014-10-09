@@ -7,20 +7,23 @@ public class BetterCollection<E> {
     }
 
     public BetterCollection(E o1) {
-        this.object1 = o1;
+        this.setFirst(o1);
     }
 
     public BetterCollection(E o1, E o2) {
-        this.object1 = o1;
-        this.object2 = o2;
+        this(o1);
+        this.setSecond(o2);
     }
 
-    public void setFirst(E o1) {
-        this.object1 = o1;
+    public void setFirst(E o) {
+        this.object1 = o;
     }
 
-    public void setSecond(E o2) {
-        this.object2 = o2;
+    public void setSecond(E o) {
+        if(this.object1 == null) {
+            throw new IllegalStateException("Can't specify the second without the first.");
+        }
+        this.object2 = o;
     }
 
     public E getFirst() {
@@ -31,14 +34,23 @@ public class BetterCollection<E> {
         return this.object2;
     }
 
+    // haha only can put in strings!
+    private static void doDumbStuff(BetterCollection<String> c) {
+        Integer i = 400;
+//        c.setFirst(i); can't do this now!
+    }
+
     public static void main(String[] args) {
         String name = "Mike Megally";
         String address = "123 Fake St";
 
-        BetterCollection<String> collection = new BetterCollection<String>(name, address);
+        BetterCollection<String> stringsOnly = new BetterCollection<String>();
+        stringsOnly.setFirst(name);
+        stringsOnly.setSecond(address);
 
-        String o1 = collection.getFirst();
-        System.out.println(o1.length()); // This is fine now because there is no way to get anything out other than a string
+        //doDumbStuff(stringsOnly);
 
+        String safe = stringsOnly.getFirst();
+        System.out.println(safe.length());
     }
 }
