@@ -25,14 +25,6 @@ public class IterableCollection<E> implements Iterable<E> {
         this.object2 = o2;
     }
 
-    public E getFirst() {
-        return this.object1;
-    }
-
-    public E getSecond() {
-        return this.object2;
-    }
-
     public Iterator<E> iterator() {
         return new IterableCollectionIterator<E>(this.object1, this.object2);
     }
