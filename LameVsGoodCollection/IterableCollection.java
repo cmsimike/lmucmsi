@@ -34,6 +34,15 @@ public class IterableCollection<E> implements Iterable<E> {
         String address = "123 Fake St";
 
         IterableCollection<String> collection = new IterableCollection<String>(name, address);
+
+        System.out.println("Old way");
+        Iterator<String> itr = collection.iterator();
+        while(itr.hasNext()) {
+            String element = itr.next();
+            System.out.println(element);
+        }
+
+        System.out.println("New way");
         for(String s: collection) {
             System.out.println(s);
         }
