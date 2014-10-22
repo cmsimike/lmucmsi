@@ -14,7 +14,7 @@ public class App {
     // Random int generation
     Random generator = new Random();
 
-    IntegerDoubler[] intDoubleProvider = {
+    IntegerDoubler[] intDoubleProvider = new IntegerDoubler[]{
         new AdditionDoubler(),
         new BitShiftDoubler(),
         new MultiplicationDoubler()

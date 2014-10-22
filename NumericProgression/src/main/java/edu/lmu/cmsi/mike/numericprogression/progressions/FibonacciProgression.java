@@ -16,7 +16,8 @@ public class FibonacciProgression extends Progression {
     this.previous = 1; // hack to make it work :-)
   }
 
-  public void advance() {
+  @Override
+  protected void advance() {
     int oldPreviousValue = this.previous;
     this.previous = this.nextValue;
     this.nextValue += oldPreviousValue;
